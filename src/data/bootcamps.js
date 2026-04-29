@@ -4,11 +4,11 @@
    ============================================ */
 
 import backendImg from '../../assets/backend-img-webp.webp'
-import productDesignImg from '../assets/images/product-design-img.png'
-import frontendImg from '../assets/images/frontend-img.png'
-import pmImg from '../assets/images/PM-img.png'
-import dataAnalyticsImg from '../assets/images/data-analytics-img.png'
-import cyberSecurityImg from '../assets/images/cyber-security-img.png'
+import productDesignImg from '../../assets/product-design-img-webp.webp'
+import frontendImg from '../../assets/frontend-img-webp.webp'
+import pmImg from '../../assets/PM-img-webp.webp'
+import dataAnalyticsImg from '../../assets/data-analytics-img-webp.webp'
+import cyberSecurityImg from '../../assets/cyber-security-img-webp.webp'
 
 const bootcamps = [
   {
