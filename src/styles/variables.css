@@ -1,0 +1,29 @@
+/* ==========================================================
+   variables.css — Layout & structural variables
+   All design token values come from tokens.css (imported via main.jsx)
+   ========================================================== */
+
+:root {
+  /* Layout */
+  --layout-max-width: 1200px;
+  --layout-max-width-tablet: 960px;
+
+  /* Section Padding */
+  --section-padding-desktop: var(--number-80);
+  --section-padding-tablet: var(--number-56);
+  --section-padding-mobile: var(--number-40);
+
+  /* Horizontal Page Padding */
+  --page-padding-desktop: var(--number-80);
+  --page-padding-tablet: var(--number-40);
+  --page-padding-mobile: var(--number-20);
+
+  /* Transitions */
+  --transition-default: 0.25s ease;
+  --transition-fast: 0.15s ease;
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.07);
+  --shadow-card-hover: 0 8px 28px rgba(0, 0, 0, 0.12);
+  --shadow-navbar: 0 1px 0 var(--color-neutral-90);
+}
