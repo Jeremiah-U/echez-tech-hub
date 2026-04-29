@@ -3,7 +3,7 @@
    Follows AGENTS.md data model exactly
    ============================================ */
 
-import backendImg from '../assets/images/backend-img.png'
+import backendImg from '../../assets/backend-img-webp.webp'
 import productDesignImg from '../assets/images/product-design-img.png'
 import frontendImg from '../assets/images/frontend-img.png'
 import pmImg from '../assets/images/PM-img.png'
