@@ -5,8 +5,9 @@ import ethLogoGreen from '../assets/images/eth logo green.png'
 const Navbar = () => {
   const location = useLocation()
   const isBootcampsPage = location.pathname === '/bootcamps'
+  const isBootcampDetailsPage = location.pathname.startsWith('/bootcamps/')
   
-  const linkText = isBootcampsPage ? 'Bootcamps' : 'Back to bootcamps'
+  const linkText = isBootcampDetailsPage ? 'Back to Bootcamps' : 'Bootcamps'
   
   return (
     <header className="navbar" role="banner">
@@ -18,7 +19,7 @@ const Navbar = () => {
         <nav className="navbar__nav" aria-label="Primary navigation">
           <Link
             to="/bootcamps"
-            className={isBootcampsPage ? 'navbar__link navbar__link--active' : 'navbar__link'}
+            className={isBootcampsPage && !isBootcampDetailsPage ? 'navbar__link navbar__link--active' : 'navbar__link'}
           >
             {linkText}
           </Link>
