@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import frontendImg from '../assets/images/frontend-img.png'
+import frontendImg from '../../assets/frontend-img-webp.webp'
 
 const FALLBACK_IMAGE = frontendImg
 

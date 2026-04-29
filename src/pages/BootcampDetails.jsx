@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import bootcamps from '../data/bootcamps.js'
 import { initiatePayment } from '../utils/paystack.js'
-import frontendImg from '../assets/images/frontend-img.png'
+import frontendImg from '../../assets/frontend-img-webp.webp'
 
 const BootcampDetails = () => {
   const { slug } = useParams()
