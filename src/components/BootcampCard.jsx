@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
+import frontendImg from '../assets/images/frontend-img.png'
 
-const FALLBACK_IMAGE = '/assets/images/frontend-img.png'
+const FALLBACK_IMAGE = frontendImg
 
 const BootcampCard = ({ bootcamp }) => {
   const handleImageError = (e) => {

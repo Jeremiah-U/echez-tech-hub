@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import bootcamps from '../data/bootcamps.js'
 import { initiatePayment } from '../utils/paystack.js'
+import frontendImg from '../assets/images/frontend-img.png'
 
 const BootcampDetails = () => {
   const { slug } = useParams()
@@ -107,7 +108,7 @@ const BootcampDetails = () => {
                 src={bootcamp.image}
                 alt={bootcamp.title}
                 className="bootcamp-details__hero-image"
-                onError={(e) => { e.currentTarget.src = '/assets/images/frontend-img.png' }}
+                onError={(e) => { e.currentTarget.src = frontendImg }}
               />
             </div>
 
