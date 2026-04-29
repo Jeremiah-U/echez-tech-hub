@@ -16,7 +16,7 @@ const bootcamps = [
     level: 'Beginners friendly',
     mode: 'Online Classes',
     startDate: '2026-06-10',
-    image: '/src/assets/images/backend-img.png',
+    image: '/assets/images/backend-img.png',
     shortDescription: 'Develop secure and scalable server-side applications using powerful backend frameworks.',
     fullDescription:
       'Master backend development from scratch. Learn how to build APIs, manage databases, handle authentication, and deploy real-world applications. This bootcamp uses Node.js, Express, and MongoDB to take you from zero to backend developer.',
@@ -51,7 +51,7 @@ const bootcamps = [
     level: 'Beginners friendly',
     mode: 'Online Classes',
     startDate: '2026-06-10',
-    image: '/src/assets/images/product-design-img.png',
+    image: '/assets/images/product-design-img.png',
     shortDescription: 'Learn how to design & build digital products with current UI/UX principles & AI integrated workflow',
     fullDescription:
       'Learn how to design & build digital products with current UI/UX principles & AI integrated workflow',
@@ -88,7 +88,7 @@ const bootcamps = [
     level: 'Beginners friendly',
     mode: 'Online Classes',
     startDate: '2026-06-10',
-    image: '/src/assets/images/frontend-img.png',
+    image: '/assets/images/frontend-img.png',
     shortDescription: 'Master HTML, CSS, and JavaScript to build modern, responsive, and interactive websites.',
     fullDescription:
       'A comprehensive bootcamp covering everything from HTML foundations to React. Build real projects, learn responsive design, and create a portfolio that lands jobs.',
@@ -125,7 +125,7 @@ const bootcamps = [
     level: 'Beginners friendly',
     mode: 'Online Classes',
     startDate: '2026-06-10',
-    image: '/src/assets/images/PM-img.png',
+    image: '/assets/images/PM-img.png',
     shortDescription: 'Gain skills to plan, execute, and deliver projects efficiently with agile and modern tools.',
     fullDescription:
       'Learn how to manage tech projects from start to finish using Agile, Scrum, and modern project management tools. Lead teams, manage timelines, and deliver impactful results.',
@@ -161,7 +161,7 @@ const bootcamps = [
     level: 'Beginners friendly',
     mode: 'Online Classes',
     startDate: '2026-06-10',
-    image: '/src/assets/images/data-analytics-img.png',
+    image: '/assets/images/data-analytics-img.png',
     shortDescription: 'Learn to clean, analyze, and visualize data to uncover insights and support smart decisions.',
     fullDescription:
       'Master data analytics using Excel, SQL, Python, and visualization tools like Power BI. Work on real datasets and build a portfolio that proves your analytical skills.',
@@ -197,7 +197,7 @@ const bootcamps = [
     level: 'Beginners friendly',
     mode: 'Online Classes',
     startDate: '2026-06-10',
-    image: '/src/assets/images/cyber-security-img.png',
+    image: '/assets/images/cyber-security-img.png',
     shortDescription: 'Understand how to protect data, systems, and networks against today\'s digital threats.',
     fullDescription:
       'Get trained in ethical hacking, network security, threat analysis, and security best practices. Prepare for industry certifications like CompTIA Security+.',

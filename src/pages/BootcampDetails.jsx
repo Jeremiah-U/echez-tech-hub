@@ -107,7 +107,7 @@ const BootcampDetails = () => {
                 src={bootcamp.image}
                 alt={bootcamp.title}
                 className="bootcamp-details__hero-image"
-                onError={(e) => { e.currentTarget.src = '/src/assets/images/frontend-img.png' }}
+                onError={(e) => { e.currentTarget.src = '/assets/images/frontend-img.png' }}
               />
             </div>
 
