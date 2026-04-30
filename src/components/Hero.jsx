@@ -11,14 +11,12 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 id="hero-heading" className="hero__title">
-          Start Building Real<br />Tech Skills That Pay
+          Build Real Tech<br />Skills That Pay
         </h1>
 
         {/* Sub-copy */}
         <p className="hero__description">
-          Join structured, hands-on bootcamps designed to take you from confused
-          beginner to confident talent, with up-to-date curriculum, real
-          projects, live classes and AI integrated workflow.
+          Structured, hands-on bootcamps that turn beginners into job-ready talent through real projects, live classes, and AI workflows.
         </p>
 
         {/* CTAs */}

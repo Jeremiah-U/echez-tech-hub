@@ -112,7 +112,7 @@ const BootcampDetails = () => {
               />
             </div>
 
-            <div className="bootcamp-details__header" style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'flex-start' }}>
+            <div className="bootcamp-details__header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
               <span className="bootcamp-details__status-badge">Active</span>
               <h1 id="details-heading" className="bootcamp-details__title">
                 {bootcamp.title}

@@ -72,8 +72,12 @@
 .hero {
   padding-top: var(--number-72);
   padding-bottom: var(--number-80);
+  min-height: 80vh;
   background: var(--color-neutral-white);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero__inner { display: flex; flex-direction: column; align-items: center; gap: var(--number-24); }
 .hero__badge {
@@ -148,10 +152,13 @@
 }
 .why-learn__header { text-align: center; margin-bottom: var(--number-40); }
 .why-learn__title {
-  font-size: var(--typography-headline-small-font-size);
-  line-height: var(--typography-headline-small-line-height);
+  font-size: var(--typography-headline-large-font-size);
+  line-height: var(--typography-headline-large-line-height);
   font-weight: 700;
   color: var(--color-on-surface-default);
+}
+@media (min-width: 768px) {
+  .why-learn__title { font-size: var(--typography-headline-large-font-size); }
 }
 .why-learn__grid {
   display: grid;
@@ -217,9 +224,13 @@
 }
 .bootcamps-section__header { text-align: center; margin-bottom: var(--number-40); }
 .bootcamps-section__title {
-  font-size: var(--typography-headline-small-font-size);
+  font-size: var(--typography-headline-large-font-size);
   font-weight: 700;
   color: var(--color-on-surface-default);
+}
+@media (min-width: 768px) {
+  .bootcamps-section { padding-top: var(--section-padding-tablet); padding-bottom: var(--section-padding-tablet); }
+  .bootcamps-section__title { font-size: var(--typography-headline-large-font-size); }
 }
 .bootcamps-section__grid {
   display: grid;
@@ -228,10 +239,6 @@
 }
 @media (min-width: 600px) { .bootcamps-section__grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 900px) { .bootcamps-section__grid { grid-template-columns: 1fr 1fr 1fr; } }
-@media (min-width: 768px) {
-  .bootcamps-section { padding-top: var(--section-padding-tablet); padding-bottom: var(--section-padding-tablet); }
-  .bootcamps-section__title { font-size: var(--typography-headline-medium-font-size); }
-}
 @media (min-width: 1024px) {
   .bootcamps-section { padding-top: var(--section-padding-desktop); padding-bottom: var(--section-padding-desktop); }
 }
@@ -459,26 +466,28 @@
   font-size: var(--typography-label-medium-font-size);
   font-weight: 500;
 }
+.bootcamp-details__status-badge { margin-bottom: var(--number-24); }
 .bootcamp-details__title {
   font-size: var(--typography-display-small-font-size);
+  line-height: var(--typography-display-small-line-height);
   font-weight: 700;
   color: var(--color-on-surface-default);
-  display: block;
+  margin-bottom: var(--number-24);
 }
 .bootcamp-details__subtitle {
-  font-size: var(--typography-body-large-font-size);
+  font-size: var(--typography-body-medium-font-size);
+  line-height: 1.7;
   color: var(--color-on-surface-varient);
   max-width: 700px;
-  display: block;
+  margin-bottom: var(--number-24);
 }
 .bootcamp-details__hero-enroll {
   padding: var(--number-14) var(--number-28);
-  align-self: flex-start;
 }
 .bootcamp-details__grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--number-28);
   align-items: flex-start;
   margin-top: 40px;
 }
@@ -493,6 +502,7 @@
   font-weight: 700;
   color: var(--color-on-surface-default);
   margin-bottom: var(--number-24);
+  padding-top: var(--number-12);
 }
 .bootcamp-details__info-list {
   display: flex;
@@ -554,7 +564,7 @@
 
 .bootcamp-details__learn-section {
   background: var(--color-neutral-99);
-  padding: var(--section-padding-desktop) 0;
+  padding: 20px 0;
   margin-top: var(--number-80);
 }
 .bootcamp-details__section-title {
@@ -587,7 +597,7 @@
 .bootcamp-details__cta-box {
   background: var(--color-neutral-white);
   border-radius: var(--corner-radius-large);
-  padding: var(--number-40);
+  padding: var(--number-20);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -662,6 +672,10 @@
   font-size: var(--typography-body-medium-font-size);
   font-weight: 600;
   min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--number-4);
 }
 .bootcamp-details__error {
   color: var(--color-error-default);
