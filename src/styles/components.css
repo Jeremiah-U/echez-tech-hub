@@ -79,7 +79,7 @@
   align-items: center;
   justify-content: center;
 }
-.hero__inner { display: flex; flex-direction: column; align-items: center; gap: var(--number-24); }
+.hero__inner { display: flex; flex-direction: column; align-items: center; gap: var(--number-20); }
 .hero__badge {
   display: inline-block;
   padding: var(--number-6) var(--number-16);
