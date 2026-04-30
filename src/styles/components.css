@@ -693,6 +693,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: var(--number-40);
   }
   .bootcamp-details__cta-action {
     align-items: flex-end;
