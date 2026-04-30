@@ -112,7 +112,7 @@
   margin-top: var(--number-8);
 }
 @media (min-width: 768px) {
-  .hero__title { font-size: var(--typography-display-large-font-size); line-height: var(--typography-display-large-line-height); }
+  .hero__title { font-size: var(--typography-display-medium-font-size); line-height: var(--typography-display-medium-line-height); }
 }
 
 /* ===== CTA SECTION ===== */
