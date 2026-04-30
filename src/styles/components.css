@@ -567,6 +567,11 @@
   padding: 20px 0;
   margin-top: var(--number-80);
 }
+@media (min-width: 768px) {
+  .bootcamp-details__learn-section {
+    padding: var(--section-padding-desktop) 0;
+  }
+}
 .bootcamp-details__section-title {
   font-size: var(--typography-headline-medium-font-size);
   line-height: var(--typography-headline-medium-line-height);
