@@ -70,14 +70,8 @@
 
 /* ===== HERO ===== */
 .hero {
-  padding-top: var(--number-72);
+  padding-top: var(--number-40);
   padding-bottom: var(--number-80);
-  min-height: 80vh;
-  background: var(--color-neutral-white);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .hero__inner { display: flex; flex-direction: column; align-items: center; gap: var(--number-20); }
 .hero__badge {
