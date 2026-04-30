@@ -214,6 +214,11 @@ const BootcampDetails = () => {
                             setEmailValidation('')
                           }
                         }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter') {
+                            handleEnroll()
+                          }
+                        }}
                         className="bootcamp-details__email-input"
                       />
                       {emailError && (
