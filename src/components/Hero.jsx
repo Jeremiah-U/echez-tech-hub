@@ -11,7 +11,7 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 id="hero-heading" className="hero__title">
-          Build Real Tech<br />Skills That Pay
+          Build Real Tech Skills
         </h1>
 
         {/* Sub-copy */}
