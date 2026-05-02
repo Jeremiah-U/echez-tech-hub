@@ -6,7 +6,7 @@ const Success = () => {
   
   const session = location.state?.session || JSON.parse(sessionStorage.getItem('eth_payment_session') || 'null')
   
-  const GROUP_LINK = 'https://chat.whatsapp.com/your-group-link'
+  const GROUP_LINK = 'https://chat.whatsapp.com/LtrK59RINDxC1GcnfeTj9S?mode=gi_t'
   
   return (
     <div className="success-page">

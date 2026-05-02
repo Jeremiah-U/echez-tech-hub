@@ -84,7 +84,7 @@ const Footer = () => {
             </li>
             <li className="footer__contact-item">
               <span className="footer__contact-label">Address:</span>
-              <span>Ikeja, Lagos, Nigeria</span>
+              <span>Ikorodu, Lagos, Nigeria</span>
             </li>
           </ul>
         </div>

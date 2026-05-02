@@ -25,7 +25,7 @@ const Hero = () => {
             View Bootcamps <span className="material-icons">arrow_forward</span>
           </Link>
           <a
-            href="https://api.whatsapp.com/send?phone=8139111114"
+            href="https://api.whatsapp.com/send?phone=09180424577"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn--outline"
