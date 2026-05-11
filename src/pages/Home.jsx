@@ -82,11 +82,11 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Choose a Bootcamp */}
+        {/* Choose a Course */}
         <section className="bootcamps-section" aria-labelledby="bootcamps-heading">
           <div className="container">
             <div className="bootcamps-section__header">
-              <h2 id="bootcamps-heading" className="bootcamps-section__title">Choose a Bootcamp</h2>
+              <h2 id="bootcamps-heading" className="bootcamps-section__title">Choose a Course</h2>
             </div>
             {bootcamps.length === 0 ? (
               <p className="bootcamps-section__empty">No bootcamps available right now. Check back soon.</p>

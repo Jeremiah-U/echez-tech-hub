@@ -12,10 +12,10 @@ const Bootcamps = () => {
         <section className="hero bootcamps-page" aria-labelledby="bootcamps-page-heading">
           <div className="container hero__inner">
             <div className="hero__badge">
-              Bootcamp
+Course
             </div>
             <h1 id="bootcamps-page-heading" className="hero__title">
-              Choose a Bootcamp<br />Build a Future
+              Choose a Course<br />Build a Future
             </h1>
 
             {bootcamps.length === 0 ? (

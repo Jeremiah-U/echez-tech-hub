@@ -22,10 +22,10 @@ const Hero = () => {
         {/* CTAs */}
         <div className="hero__cta-group">
           <Link to="/bootcamps" className="btn btn--primary" id="hero-view-bootcamps">
-            View Bootcamps <span className="material-icons">arrow_forward</span>
+            View Courses <span className="material-icons">arrow_forward</span>
           </Link>
           <a
-            href="https://api.whatsapp.com/send?phone=09180424577"
+            href="https://api.whatsapp.com/send?phone=09160424577"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn--outline"

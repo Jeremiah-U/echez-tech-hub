@@ -14,7 +14,7 @@ const CTASection = () => {
           skills that matter now and create real opportunities for yourself.
         </p>
         <Link to="/bootcamps" className="btn btn--secondary" id="cta-view-bootcamps">
-          View Bootcamps <span className="material-icons">arrow_forward</span>
+          View Courses <span className="material-icons">arrow_forward</span>
         </Link>
       </div>
     </section>

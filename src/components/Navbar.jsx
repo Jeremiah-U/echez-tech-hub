@@ -7,7 +7,7 @@ const Navbar = () => {
   const isBootcampsPage = location.pathname === '/bootcamps'
   const isBootcampDetailsPage = location.pathname.startsWith('/bootcamps/')
   
-  const linkText = isBootcampDetailsPage ? 'Back to Bootcamps' : 'Bootcamps'
+  const linkText = isBootcampDetailsPage ? 'Back to Courses' : 'Courses'
   
   return (
     <header className="navbar" role="banner">

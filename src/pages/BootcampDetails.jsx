@@ -24,12 +24,12 @@ const BootcampDetails = () => {
         <Navbar />
         <main id="main-content">
           <div className="container error-state">
-            <h1 className="error-state__title">Bootcamp Not Found</h1>
+            <h1 className="error-state__title">Course Not Found</h1>
             <p className="error-state__text">
-              The bootcamp you are looking for does not exist.
+              The course you are looking for does not exist.
             </p>
             <Link to="/bootcamps" className="btn btn--primary">
-              Browse All Bootcamps
+              Browse All Courses
             </Link>
           </div>
         </main>
