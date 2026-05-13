@@ -57,14 +57,14 @@ const Home = () => {
         <CTASection />
 
         {/* Why Learn With Us */}
-        <section className="why-learn" aria-labelledby="why-heading">
+        <section className="why-learn reveal" aria-labelledby="why-heading">
           <div className="container">
             <div className="why-learn__header">
-              <h2 id="why-heading" className="why-learn__title">Why Learn With Us</h2>
+              <h2 id="why-heading" className="why-learn__title reveal">Why Learn With Us</h2>
             </div>
             <ul className="why-learn__grid" role="list">
-              {features.map((f) => (
-                <li key={f.id} className="why-learn__card">
+              {features.map((f, i) => (
+                <li key={f.id} className={`why-learn__card reveal reveal-delay-${i + 1}`}>
                   <div className="why-learn__card-icon">{icons[f.icon]}</div>
                   <p className="why-learn__card-text">{f.text}</p>
                 </li>
@@ -74,7 +74,7 @@ const Home = () => {
         </section>
 
         {/* Motivational quote */}
-        <div className="quote-band" role="complementary" aria-label="Motivational quote">
+        <div className="quote-band reveal" role="complementary" aria-label="Motivational quote">
           <div className="container">
             <p className="quote-band__text">
               &ldquo;The best time to plant a tree was ten years ago. The next best time is <em>now.</em>&rdquo;
@@ -83,7 +83,7 @@ const Home = () => {
         </div>
 
         {/* Choose a Course */}
-        <section className="bootcamps-section" aria-labelledby="bootcamps-heading">
+        <section className="bootcamps-section reveal" aria-labelledby="bootcamps-heading">
           <div className="container">
             <div className="bootcamps-section__header">
               <h2 id="bootcamps-heading" className="bootcamps-section__title">Choose a Course</h2>
@@ -92,8 +92,8 @@ const Home = () => {
               <p className="bootcamps-section__empty">No bootcamps available right now. Check back soon.</p>
             ) : (
               <ul className="bootcamps-section__grid" role="list">
-                {bootcamps.map((b) => (
-                  <li key={b.id}>
+                {bootcamps.map((b, i) => (
+                  <li key={b.id} className={`reveal reveal-delay-${i + 1}`}>
                     <BootcampCard bootcamp={b} />
                   </li>
                 ))}

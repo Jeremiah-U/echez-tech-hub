@@ -10,7 +10,7 @@ const Navbar = () => {
   const linkText = isBootcampDetailsPage ? 'Back to Courses' : 'Courses'
   
   return (
-    <header className="navbar" role="banner">
+    <header className="navbar reveal" role="banner">
       <div className="container navbar__inner">
         <Link to="/" className="navbar__logo" aria-label="Echez Tech Hub Home">
           <img src={ethLogoGreen} alt="Echez Tech Hub" className="navbar__logo-img" />

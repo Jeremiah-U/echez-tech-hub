@@ -10,7 +10,7 @@ const Success = () => {
   
   return (
     <div className="success-page">
-      <header className="success-page__header">
+      <header className="success-page__header reveal">
         <div className="container">
           <Link to="/" className="success-page__logo">
             <img src={ethLogoGreen} alt="Echez Tech Hub" />
@@ -20,7 +20,7 @@ const Success = () => {
 
       <main className="success-page__main">
         <div className="container">
-          <div className="success-page__content">
+          <div className="success-page__content reveal reveal-delay-1">
             <span className="hero__badge">
               Congratulations
             </span>

@@ -84,7 +84,7 @@
     padding-top: var(--number-72);
   }
 }
-.hero__inner { display: flex; flex-direction: column; align-items: center; gap: var(--number-20); }
+.hero__inner { display: flex; flex-direction: column; align-items: center; }
 .hero__badge {
   display: inline-block;
   padding: var(--number-6) var(--number-16);
@@ -94,6 +94,13 @@
   font-size: var(--typography-label-large-font-size);
   font-weight: 500;
   line-height: var(--typography-label-large-line-height);
+  margin-bottom: 20px;
+}
+.hero__title { margin-bottom: 12px; }
+@media (min-width: 768px) {
+  .hero__inner { gap: 24px; }
+  .hero__badge { margin-bottom: 16px; }
+  .hero__title { margin-bottom: 0; }
 }
 .hero__title {
   font-size: var(--typography-display-small-font-size);
@@ -109,16 +116,33 @@
   color: var(--color-on-surface-varient);
   max-width: 520px;
 }
+.hero__break { display: none; }
+.hero__text-mobile { display: inline; }
+.hero__text-desktop { display: none; }
+@media (min-width: 768px) {
+  .hero__break::before { content: '\A'; white-space: pre; }
+  .hero__text-mobile { display: none; }
+  .hero__text-desktop { display: inline; }
+}
 .hero__cta-group {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--number-16);
-  justify-content: center;
-  margin-top: var(--number-8);
+  margin-top: 24px;
+  width: 100%;
 }
+.hero__cta-group .btn { width: 100%; justify-content: center; }
 @media (min-width: 768px) {
   .hero__title { font-size: var(--typography-display-medium-font-size); line-height: 20px; }
   .hero__description { line-height: 20px; }
+  .hero__cta-group { 
+    flex-direction: row; 
+    justify-content: center;
+    gap: var(--number-16);
+    margin-top: var(--number-8);
+    width: auto;
+  }
+  .hero__cta-group .btn { width: auto; }
 }
 
 /* ===== CTA SECTION ===== */
@@ -737,6 +761,7 @@
 .bootcamps-page .hero__title {
   text-align: center;
   margin-bottom: 40px;
+  line-height: var(--typography-display-small-line-height);
 }
 .bootcamps-page__header { text-align: center; margin-bottom: var(--number-40); }
 .bootcamps-page__title { font-size: var(--typography-headline-small-font-size); font-weight: 700; color: var(--color-on-surface-default); margin-bottom: var(--number-8); }

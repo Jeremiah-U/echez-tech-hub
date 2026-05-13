@@ -9,12 +9,12 @@ const Bootcamps = () => {
     <>
       <Navbar />
       <main id="main-content">
-        <section className="hero bootcamps-page" aria-labelledby="bootcamps-page-heading">
+        <section className="hero bootcamps-page reveal" aria-labelledby="bootcamps-page-heading">
           <div className="container hero__inner">
-            <div className="hero__badge">
+            <div className="hero__badge reveal">
 Course
             </div>
-            <h1 id="bootcamps-page-heading" className="hero__title">
+            <h1 id="bootcamps-page-heading" className="hero__title reveal reveal-delay-1">
               Choose a Course<br />Build a Future
             </h1>
 
@@ -22,8 +22,8 @@ Course
               <p className="bootcamps-section__empty">No bootcamps available right now. Check back soon.</p>
             ) : (
               <ul className="bootcamps-section__grid" role="list">
-                {bootcamps.map((b) => (
-                  <li key={b.id}>
+                {bootcamps.map((b, i) => (
+                  <li key={b.id} className={`reveal reveal-delay-${Math.min(i + 2, 6)}`}>
                     <BootcampCard bootcamp={b} />
                   </li>
                 ))}

@@ -23,7 +23,7 @@ const BootcampDetails = () => {
       <>
         <Navbar />
         <main id="main-content">
-          <div className="container error-state">
+          <div className="container error-state reveal">
             <h1 className="error-state__title">Course Not Found</h1>
             <p className="error-state__text">
               The course you are looking for does not exist.
@@ -100,10 +100,10 @@ const BootcampDetails = () => {
     <>
       <Navbar />
       <main id="main-content">
-        <section className="bootcamp-details" aria-labelledby="details-heading">
+        <section className="bootcamp-details reveal" aria-labelledby="details-heading">
           <div className="container">
             
-            <div className="bootcamp-details__hero-section">
+            <div className="bootcamp-details__hero-section reveal">
               <img
                 src={bootcamp.image}
                 alt={bootcamp.title}
@@ -112,7 +112,7 @@ const BootcampDetails = () => {
               />
             </div>
 
-            <div className="bootcamp-details__header" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+            <div className="bootcamp-details__header reveal reveal-delay-1" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
               <span className="bootcamp-details__status-badge">Active</span>
               <h1 id="details-heading" className="bootcamp-details__title">
                 {bootcamp.title}
@@ -129,7 +129,7 @@ const BootcampDetails = () => {
 
             <div className="bootcamp-details__grid">
               {/* Details Column */}
-              <div className="bootcamp-details__info-col">
+              <div className="bootcamp-details__info-col reveal reveal-delay-2">
                 <h2 className="bootcamp-details__col-title">Details</h2>
                 <ul className="bootcamp-details__info-list">
                   <li className="bootcamp-details__info-item">
@@ -151,7 +151,7 @@ const BootcampDetails = () => {
               </div>
 
               {/* Prerequisites Column */}
-              <div className="bootcamp-details__info-col">
+              <div className="bootcamp-details__info-col reveal reveal-delay-3">
                 <h2 className="bootcamp-details__col-title">Prerequisites</h2>
                 <ul className="bootcamp-details__prereq-list">
                   {bootcamp.prerequisites?.map((item, i) => (
@@ -165,7 +165,7 @@ const BootcampDetails = () => {
             </div>
           </div>
 
-          <div className="bootcamp-details__learn-section">
+          <div className="bootcamp-details__learn-section reveal">
             <div className="container">
               <h2 className="bootcamp-details__section-title">You Will Learn</h2>
               <ul className="bootcamp-details__learn-grid">
@@ -178,7 +178,7 @@ const BootcampDetails = () => {
               </ul>
 
               {/* Grab Your Spot Box */}
-              <div id="enroll-box" className="bootcamp-details__cta-box">
+              <div id="enroll-box" className="bootcamp-details__cta-box reveal reveal-delay-1">
                 <div className="bootcamp-details__cta-content">
                   <h3 className="bootcamp-details__cta-title">Grab Your Spot!</h3>
                   <p className="bootcamp-details__cta-text">

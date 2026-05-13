@@ -5,7 +5,7 @@ const SUPPORT_EMAIL = import.meta.env.VITE_SUPPORT_EMAIL || 'support@echeztechhu
 
 const Footer = () => {
   return (
-    <footer className="footer" role="contentinfo">
+    <footer className="footer reveal" role="contentinfo">
       <div className="container footer__inner">
         {/* Left: Logo + socials */}
         <div className="footer__brand">
