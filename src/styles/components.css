@@ -831,3 +831,39 @@
 .error-state { text-align: center; padding: var(--number-40); }
 .error-state__title { font-size: var(--typography-headline-small-font-size); font-weight: 700; color: var(--color-error-default); margin-bottom: var(--number-12); }
 .error-state__text { font-size: var(--typography-body-medium-font-size); color: var(--color-on-surface-varient); margin-bottom: var(--number-24); }
+
+/* ===== SUCCESS MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--number-20);
+}
+
+.modal-content {
+  background: var(--color-neutral-white);
+  border-radius: var(--corner-radius-large);
+  max-width: 500px;
+  width: 100%;
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.success-modal__close {
+  display: block;
+  font-size: var(--typography-body-medium-font-size);
+  color: var(--color-on-surface-varient);
+  text-decoration: underline;
+  margin-top: var(--number-16);
+}

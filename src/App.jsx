@@ -6,6 +6,8 @@ const ScrollReveal = () => {
   const location = useLocation()
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+    
     requestAnimationFrame(() => {
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

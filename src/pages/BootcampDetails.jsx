@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { useParams, useNavigate, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
+import SuccessModal from '../components/SuccessModal.jsx'
 import bootcamps from '../data/bootcamps.js'
 import { initiatePayment } from '../utils/paystack.js'
 
@@ -9,7 +10,6 @@ const FALLBACK_IMAGE = '/frontend-img-webp.webp'
 
 const BootcampDetails = () => {
   const { slug } = useParams()
-  const navigate = useNavigate()
 
   const bootcamp = bootcamps.find((b) => b.slug === slug)
 
@@ -17,6 +17,8 @@ const BootcampDetails = () => {
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState('')
   const [emailValidation, setEmailValidation] = useState('')
+  const [showSuccessModal, setShowSuccessModal] = useState(false)
+  const [paymentSession, setPaymentSession] = useState(null)
 
   const handleEnroll = () => {
     if (!email.trim()) {
@@ -41,7 +43,8 @@ const BootcampDetails = () => {
       email: email.trim(),
       onSuccess: (session) => {
         setIsProcessing(false)
-        navigate('/success', { state: { session } })
+        setPaymentSession(session)
+        setShowSuccessModal(true)
       },
       onClose: () => {
         setIsProcessing(false)
@@ -240,6 +243,15 @@ const BootcampDetails = () => {
         </section>
       </main>
       <Footer />
+      {showSuccessModal && (
+        <SuccessModal 
+          session={paymentSession} 
+          onClose={() => {
+            setShowSuccessModal(false)
+            setEmail('')
+          }} 
+        />
+      )}
     </>
   )
 }
