@@ -12,7 +12,7 @@ const Bootcamps = () => {
         <section className="hero bootcamps-page reveal" aria-labelledby="bootcamps-page-heading">
           <div className="container hero__inner">
             <div className="hero__badge reveal">
-Course
+              Course
             </div>
             <h1 id="bootcamps-page-heading" className="hero__title reveal reveal-delay-1">
               Choose a Course<br />Build a Future

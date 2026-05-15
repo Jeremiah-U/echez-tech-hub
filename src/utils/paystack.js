@@ -1,23 +1,8 @@
-/* =============================================================
-   paystack.js — Paystack inline payment integration
-   Uses only the public key from environment variables.
-   Never handles card data directly (AGENTS.md security rules).
-   ============================================================= */
-
 import { generateReference, storePaymentSession } from './helpers.js'
 
 const PAYSTACK_PUBLIC_KEY = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
 
-/**
- * Trigger a Paystack inline payment popup.
- *
- * @param {Object} params
- * @param {Object} params.bootcamp   — The full bootcamp object
- * @param {string} params.email      — Customer email
- * @param {Function} params.onSuccess — Callback on successful payment
- * @param {Function} params.onClose   — Callback when user closes the popup
- * @param {Function} params.onError   — Callback on payment error
- */
 export const initiatePayment = ({ bootcamp, email, onSuccess, onClose, onError }) => {
   if (typeof window.PaystackPop === 'undefined') {
     if (onError) {
@@ -70,24 +55,44 @@ export const initiatePayment = ({ bootcamp, email, onSuccess, onClose, onError }
         return
       }
 
-      if (response.amount < expectedAmount) {
-        if (onError) {
-          onError({ message: 'Payment amount mismatch. Please contact support with reference: ' + response.reference })
-        }
-        return
-      }
+      fetch(`${API_URL}/api/verify-payment`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reference: response.reference })
+      })
+        .then(res => res.json())
+        .then(verifyData => {
+          if (!verifyData.valid) {
+            if (onError) {
+              onError({ message: verifyData.error || 'Payment verification failed.' })
+            }
+            return
+          }
 
-      const sessionData = {
-        bootcampId: bootcamp.id,
-        title: bootcamp.title,
-        amount: bootcamp.price,
-        currency: 'NGN',
-        reference: response.reference,
-        status: 'success',
-      }
-      storePaymentSession(sessionData)
+          if (verifyData.amount !== bootcamp.price) {
+            if (onError) {
+              onError({ message: 'Payment amount mismatch. Please contact support with reference: ' + response.reference })
+            }
+            return
+          }
 
-      if (onSuccess) onSuccess(sessionData)
+          const sessionData = {
+            bootcampId: bootcamp.id,
+            title: bootcamp.title,
+            amount: bootcamp.price,
+            currency: 'NGN',
+            reference: response.reference,
+            status: 'success',
+          }
+          storePaymentSession(sessionData)
+
+          if (onSuccess) onSuccess(sessionData)
+        })
+        .catch(() => {
+          if (onError) {
+            onError({ message: 'Payment verification failed. Please contact support.' })
+          }
+        })
     },
     onClose: () => {
       if (onClose) onClose()

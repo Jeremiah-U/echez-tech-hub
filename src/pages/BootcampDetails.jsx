@@ -4,7 +4,8 @@ import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import bootcamps from '../data/bootcamps.js'
 import { initiatePayment } from '../utils/paystack.js'
-import frontendImg from '../../assets/frontend-img-webp.webp'
+
+const FALLBACK_IMAGE = '/frontend-img-webp.webp'
 
 const BootcampDetails = () => {
   const { slug } = useParams()
@@ -16,27 +17,6 @@ const BootcampDetails = () => {
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState('')
   const [emailValidation, setEmailValidation] = useState('')
-
-  // Invalid slug — redirect to bootcamps list
-  if (!bootcamp) {
-    return (
-      <>
-        <Navbar />
-        <main id="main-content">
-          <div className="container error-state reveal">
-            <h1 className="error-state__title">Course Not Found</h1>
-            <p className="error-state__text">
-              The course you are looking for does not exist.
-            </p>
-            <Link to="/bootcamps" className="btn btn--primary">
-              Browse All Courses
-            </Link>
-          </div>
-        </main>
-        <Footer />
-      </>
-    )
-  }
 
   const handleEnroll = () => {
     if (!email.trim()) {
@@ -71,6 +51,26 @@ const BootcampDetails = () => {
         alert(err.message || 'Payment failed. Please try again.')
       },
     })
+  }
+
+  if (!bootcamp) {
+    return (
+      <>
+        <Navbar />
+        <main id="main-content">
+          <div className="container error-state reveal">
+            <h1 className="error-state__title">Course Not Found</h1>
+            <p className="error-state__text">
+              The course you are looking for does not exist.
+            </p>
+            <Link to="/bootcamps" className="btn btn--primary">
+              Browse All Courses
+            </Link>
+          </div>
+        </main>
+        <Footer />
+      </>
+    )
   }
 
   const icons = {
@@ -108,7 +108,7 @@ const BootcampDetails = () => {
                 src={bootcamp.image}
                 alt={bootcamp.title}
                 className="bootcamp-details__hero-image"
-                onError={(e) => { e.currentTarget.src = frontendImg }}
+                onError={(e) => { e.currentTarget.src = FALLBACK_IMAGE }}
               />
             </div>
 
@@ -128,7 +128,6 @@ const BootcampDetails = () => {
             </div>
 
             <div className="bootcamp-details__grid">
-              {/* Details Column */}
               <div className="bootcamp-details__info-col reveal reveal-delay-2">
                 <h2 className="bootcamp-details__col-title">Details</h2>
                 <ul className="bootcamp-details__info-list">
@@ -150,7 +149,6 @@ const BootcampDetails = () => {
                 </ul>
               </div>
 
-              {/* Prerequisites Column */}
               <div className="bootcamp-details__info-col reveal reveal-delay-3">
                 <h2 className="bootcamp-details__col-title">Prerequisites</h2>
                 <ul className="bootcamp-details__prereq-list">
@@ -177,7 +175,6 @@ const BootcampDetails = () => {
                 ))}
               </ul>
 
-              {/* Grab Your Spot Box */}
               <div id="enroll-box" className="bootcamp-details__cta-box reveal reveal-delay-1">
                 <div className="bootcamp-details__cta-content">
                   <h3 className="bootcamp-details__cta-title">Grab Your Spot!</h3>

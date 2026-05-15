@@ -3,12 +3,12 @@
    Follows AGENTS.md data model exactly
    ============================================ */
 
-import backendImg from '../../assets/backend-img-webp.webp'
-import productDesignImg from '../../assets/product-design-img-webp.webp'
-import frontendImg from '../../assets/frontend-img-webp.webp'
-import pmImg from '../../assets/PM-img-webp.webp'
-import dataAnalyticsImg from '../../assets/data-analytics-img-webp.webp'
-import cyberSecurityImg from '../../assets/cyber-security-img-webp.webp'
+import backendImg from '/backend-img-webp.webp'
+import productDesignImg from '/product-design-img-webp.webp'
+import frontendImg from '/frontend-img-webp.webp'
+import pmImg from '/PM-img-webp.webp'
+import dataAnalyticsImg from '/data-analytics-img-webp.webp'
+import cyberSecurityImg from '/cyber-security-img-webp.webp'
 
 const bootcamps = [
   {
